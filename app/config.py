@@ -1,12 +1,11 @@
 import os
 
-
 class Config:
     # Secret key for the Flask app
     SECRET_KEY = os.environ.get("SECRET_KEY", "your_secret_key")
 
     # Database configuration
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI")
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:1234@localhost/Data'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Add other configuration variables as needed
